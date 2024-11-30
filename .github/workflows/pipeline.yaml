@@ -1,5 +1,5 @@
 name: this is a test work flow
-on: push
+on: [push, workflow_dispatch]
 
 jobs:
   test:
