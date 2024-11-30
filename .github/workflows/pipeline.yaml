@@ -18,6 +18,7 @@ jobs:
       - name: To run the tests
         run: npm test
   build:
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - name: To get the code # to get the code for this repo.
