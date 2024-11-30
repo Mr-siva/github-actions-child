@@ -12,24 +12,40 @@ jobs:
         with:
           node-version: '18'
       - name: NPM dependencies installed
-        run: |
-          echo "ls -lrt"
-          npm install
+        run: npm install
       - name: To run the tests
         run: npm test
   build:
     needs: [test]
     runs-on: ubuntu-latest
     steps:
+      
       - name: To get the code # to get the code for this repo.
         uses: actions/checkout@v3
+      
       - name: To install node modules # to install the node modules for this repo.
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+      
       - name: NPM dependencies installed
         run: npm install
+      
       - name: To Build the projects
         run: npm run build
-      - name: Deploying
-        run: echo "this app is deploying"
+      
+      - name: Upload artifacts
+        use: actions/upload-artifact@v4
+        with:
+          name: 
+          path: |
+            dist
+            pacakage.json
+
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deploying.....!"

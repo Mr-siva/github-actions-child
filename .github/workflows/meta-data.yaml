@@ -1,5 +1,16 @@
 name: Actions Metadata
-on: workflow_dispatch
+on:
+  pull_request:
+    type:
+      - opened
+  branches:
+    - main
+    - 'dev-*'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'dev-*'
 jobs:
   Actions-info:
     runs-on: ubuntu-latest
