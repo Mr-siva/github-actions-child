@@ -1,4 +1,4 @@
-name: this is a test work flow
+name: Node Pipeline
 on: [push, workflow_dispatch]
 
 jobs:

@@ -1,0 +1,8 @@
+name: Actions Metadata
+on: workflow_dispatch
+jobs:
+  Actions-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: To featch the metadate content
+        run: echo "${{ toJSON(github) }}"
