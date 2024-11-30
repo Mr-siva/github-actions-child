@@ -1,0 +1,17 @@
+name: this is a test work flow
+on: [push]
+
+jobs:
+  my-job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: To get the code # to get the code for this repo.
+        uses: actions/checkout@v3
+      - name: To install node modules # to install the node modules for this repo.
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: NPM dependencies installed
+        run: npm ci
+      - name: To run the tests
+        run: npm test
