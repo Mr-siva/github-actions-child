@@ -12,6 +12,8 @@ jobs:
         with:
           node-version: '18'
       - name: NPM dependencies installed
-        run: npm install
+        run: |
+          echo "ls -lrt"
+          npm install
       - name: To run the tests
         run: npm test
