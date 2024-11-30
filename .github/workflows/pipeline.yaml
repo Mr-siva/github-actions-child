@@ -37,10 +37,10 @@ jobs:
       - name: Upload artifacts
         use: actions/upload-artifact@v4
         with:
-          name: 
+          name: Artifact
           path: |
             dist
-            pacakage.json
+          #pacakage.json
 
 
   deploy:
