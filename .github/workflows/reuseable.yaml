@@ -1,5 +1,12 @@
 name: Reuseable - workfloe
-on: workflow_call
+on: 
+  workflow_call:
+    inputs:
+      artifact-name:                                 #artifact-name value given in main WF
+        description: the name of deploy artifact files
+        default: dist ## not present in main wf
+        type: string
+
 jobs:
   Deploy-job:
     runs-on: ubuntu-latest

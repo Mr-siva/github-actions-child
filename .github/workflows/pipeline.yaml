@@ -37,3 +37,5 @@ jobs:
   deploy:
     needs: [build]
     uses: ./.github/workflows/reuseable.yaml # refering other work-flow
+    with:
+      artifact-name: Artifact-files 
