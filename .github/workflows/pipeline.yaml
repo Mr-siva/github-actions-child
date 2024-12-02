@@ -3,7 +3,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   test:
-    if: false
+    #if: false
     runs-on: ubuntu-latest
     steps:
       - name: To get the code # to get the code for this repo.
@@ -17,7 +17,7 @@ jobs:
       - name: To run the tests
         run: npm test
   build:
-    if: false
+    #if: false
     needs: [test]
     runs-on: ubuntu-latest
     steps:
@@ -37,15 +37,5 @@ jobs:
           name: Artifact-files
           path: dist
   deploy:
-    if: false
     needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: get build artifacrs
-        uses: actions/download-artifact@v4
-        with:
-          name: Artifact-files
-      - name: listing content
-        run: ls
-      - name: Deploy
-        run: echo "Deploying.....!"
+    uses: ./.github/workflows/reuseable.yaml # refering other work-flow

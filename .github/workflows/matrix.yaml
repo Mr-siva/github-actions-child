@@ -2,11 +2,19 @@ name: Matrix Demo
 on: push
 jobs:
   My_matrix-job:
+    if: false
     continue-on-error: true
     strategy:
       matrix:
         node-version: [12,14,16]
         operation-system: [ubuntu-latest , windows-latest]
+        #-to get only only combination of the matrix
+        include:
+          - node-version: 18
+            operation-systeam: ubuntu-latest
+        exclude:
+          - node-version: 12
+            operation-system: windows-latest
     runs-on: ${{ matrix.operation-system }}
     steps:
       - name: To get the code # to get the code for this repo.
