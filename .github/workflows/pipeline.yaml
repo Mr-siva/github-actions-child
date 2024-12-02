@@ -3,7 +3,6 @@ on: [push, workflow_dispatch]
 
 jobs:
   test:
-    #if: false
     runs-on: ubuntu-latest
     steps:
       - name: To get the code # to get the code for this repo.
@@ -17,7 +16,6 @@ jobs:
       - name: To run the tests
         run: npm test
   build:
-    #if: false
     needs: [test]
     runs-on: ubuntu-latest
     steps:
