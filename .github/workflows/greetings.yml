@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Greeting
-        run: echo "Hello and welcome! 👋"
+        run: |
+          echo "Hello and welcome! 👋"
+          echo "ram"
       - name: Print Greeting - 
         run: echo "Hello and welcome! -2 "
