@@ -12,3 +12,5 @@ jobs:
           echo "ram"
       - name: Print Greeting - 
         run: echo "Hello and welcome! -2 "
+      - name: Get node
+        uses: actions/checkout@v4
