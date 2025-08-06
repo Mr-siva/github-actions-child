@@ -14,3 +14,8 @@ jobs:
         run: echo "Hello and welcome! -2 "
       - name: Get node
         uses: actions/checkout@v4
+  wishing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Greeting
+        run: echo "Hello world"
