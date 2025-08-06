@@ -1,0 +1,12 @@
+name: Greetings
+
+on: [ push, workflow_dispatch ]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Greeting
+        run: |
+          echo "H=here is out put 👋"
+          echo "${{ toJson(github) }}"
