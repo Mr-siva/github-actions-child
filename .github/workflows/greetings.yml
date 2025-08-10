@@ -4,7 +4,11 @@ on: [ push, workflow_dispatch ]
 
 jobs:
   greeting:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix: 
+        versin: [1, 2, 3]
+        operation-system: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.operation-system }}
     steps:
       - name: Print Greeting
         run: |
