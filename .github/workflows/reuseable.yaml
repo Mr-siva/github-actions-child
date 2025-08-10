@@ -6,7 +6,7 @@ on:
         type: string
         required: false
         description: "Here we have to type environment name"
-        #default: dev
+        default: dev
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -14,3 +14,9 @@ jobs:
       - name: Output info
         run: | 
             echo "Deploying to environment: ${{ inputs.env_name }}"
+  deploy-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output info
+        run: | 
+            echo "Deploying to environment prod: ${{ inputs.env_name }}"
