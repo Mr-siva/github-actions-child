@@ -1,10 +1,14 @@
 name: Re-useable Deployment
 on:
   workflow_call:
-
+    inputs:
+        env_name:
+          required: true
+          type: string 
+          description: here we have to trye environment name
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Output info
-        run: echo "Deploying & uploading by reusable workflow by siva"
+        run: echo "Deploying to environment: ${{ inputs.env_name }}"
