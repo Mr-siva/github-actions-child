@@ -11,4 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output info
-        run: echo "Deploying to environment: ${{ inputs.env_name }}"
+        run: | 
+            echo "Deploying to environment: ${{ inputs.env_name }}"
