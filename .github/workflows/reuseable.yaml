@@ -1,11 +1,12 @@
 name: Re-useable Deployment
+
 on:
   workflow_call:
     inputs:
       env_name:
+        description: "Here we have to type environment name"
         required: true
         type: string
-        description: "Here we have to type environment name"
 
 jobs:
   deploy:
