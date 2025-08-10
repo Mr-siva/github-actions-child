@@ -6,8 +6,11 @@ jobs:
   greeting:
     strategy:
       matrix: 
-        versin: [1, 2, 3]
+        version: [1, 2, 3]
         operation-system: [ubuntu-latest, windows-latest]
+        exclude: 
+          - version: 2
+            operation-system: windows-latest
     runs-on: ${{ matrix.operation-system }}
     steps:
       - name: Print Greeting
