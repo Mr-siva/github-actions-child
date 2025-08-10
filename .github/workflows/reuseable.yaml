@@ -4,8 +4,8 @@ on:
     inputs:
       env_name:
         required: true
-        type: string 
-        description: here we have to type environment name
+        type: string
+        description: "Here we have to type environment name"
 
 jobs:
   deploy:
