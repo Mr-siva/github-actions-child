@@ -28,7 +28,4 @@ jobs:
       - name: REsuable Deploy
         uses: ./.github/workflows/reuseable.yaml
   wishing:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print Greeting
-        run: echo "Hello world"
+    uses: ./.github/workflows/reuseable.yaml
