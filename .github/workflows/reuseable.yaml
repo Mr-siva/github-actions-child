@@ -1,8 +1,10 @@
 name: Re-useable Deployment
-on: workflow_call
+on:
+  workflow_call:
+
 jobs:
-    deploy:
-        runs-on: ununtu-latest
-        steps:
-          - name: output info
-            run: echo "Deploying $ uoloading by reuseable wf"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output info
+        run: echo "Deploying & uploading by reusable workflow"

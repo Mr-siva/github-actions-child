@@ -7,25 +7,24 @@ jobs:
     strategy:
       matrix: 
         version: [1, 2, 3]
-        operation-system: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest]
         exclude: 
           - version: 2
-            operation-system: windows-latest
-    runs-on: ${{ matrix.operation-system }}
+            os: windows-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Print Greeting
         run: |
           echo "Hello and welcome! 👋"
           echo "ram"
-      - name: Print Greeting - 
-        run: echo "Hello and welcome! -2 "
-      - name: Get node
+      - name: Print Greeting 2
+        run: echo "Hello and welcome! -2"
+      - name: Checkout repo
         uses: actions/checkout@v4
-      - name:
+      - name: Print message
         run: |
-          echo "i am a good persson"
+          echo "I am a good person"
           echo "CHAPRI"
-      - name: REsuable Deploy
-        uses: ./.github/workflows/reuseable.yaml
+
   wishing:
     uses: ./.github/workflows/reuseable.yaml
