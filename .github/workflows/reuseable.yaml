@@ -1,5 +1,4 @@
 name: Re-useable Deployment
-
 on:
   workflow_call:
     inputs:
@@ -7,7 +6,6 @@ on:
         type: string
         required: true
         description: "Here we have to type environment name"
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
