@@ -25,6 +25,8 @@ jobs:
         run: |
           echo "i am a good persson"
           echo "CHAPRI"
+      - name: REsuable Deploy
+        uses: ./.github/workflows/reuseable.yaml
   wishing:
     runs-on: ubuntu-latest
     steps:
