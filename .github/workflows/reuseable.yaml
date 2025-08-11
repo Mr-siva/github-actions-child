@@ -19,4 +19,4 @@ jobs:
     steps:
       - name: Output info
         run: | 
-            echo "Deploying to environment prod: ${{ inputs.env_name }}"
+            echo "Deploying to environment - step-2: ${{ inputs.env_name }}"
