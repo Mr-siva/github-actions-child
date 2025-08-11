@@ -32,4 +32,4 @@ jobs:
       - name: re-useable workflow
         uses: ./.github/actions/mesg
         with:
-          who-to-greet: "hello users"
+          who-to-greet: "hello Siva"
