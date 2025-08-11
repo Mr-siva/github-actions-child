@@ -23,3 +23,8 @@ jobs:
     uses: ./.github/workflows/reuseable.yaml
     with:
       env_name: UAT
+
+  wishing-2:
+    uses: ./.github/Actions/mesg
+    with:
+      who-to-greet: hello users
