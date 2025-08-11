@@ -22,4 +22,4 @@ jobs:
   wishing:
     uses: ./.github/workflows/reuseable.yaml
     with:
-      env_name: production
+      env_name: UAT
