@@ -15,8 +15,9 @@ jobs:
         run: | 
             echo "Deploying to environment: ${{ inputs.env_name }}"
   deploy-prod:
+    if: ${{ inputs.env_name  }} == production
     runs-on: ubuntu-latest
     steps:
-      - name: Output info
+        - name: Output info
         run: | 
             echo "Deploying to environment - step-2: ${{ inputs.env_name }}"
