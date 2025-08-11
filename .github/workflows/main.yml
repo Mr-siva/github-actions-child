@@ -27,7 +27,9 @@ jobs:
   wishing-2:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4   # ✅ Checkout your repo first
-      - uses: ./.github/actions/mesg
+      - name: Checkout repo
+        uses: actions/checkout@v4   # ✅ Checkout your repo first
+      - name: re-useable workflow
+        uses: ./.github/actions/mesg
         with:
           who-to-greet: "hello users"
