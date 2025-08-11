@@ -28,6 +28,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4   # ✅ Checkout your repo first
-      - uses: ./.github/actions/mesg
+      - uses: ./.github/Actions/mesg
         with:
           who-to-greet: "hello users"
