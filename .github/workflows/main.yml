@@ -20,7 +20,7 @@ jobs:
           echo "CHAPRI"
 
   wishing:
-    uses: ./.github/workflows/reuseable.yaml
+    uses: Mr-siva/github-actions-root/.github/workflows/reuseable.yaml@main
     with:
       env_name: UAT
   
