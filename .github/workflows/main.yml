@@ -29,10 +29,10 @@ jobs:
         with:
           who-to-greet: "Siva"
 
-  terraform:
+  wishes:
     uses: Mr-siva/github-actions-root/.github/workflows/reuseable.yaml@main
     with:
-      env_name: UAT          
+      env_name: dev          
 
 
 
