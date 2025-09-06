@@ -30,7 +30,7 @@ resource "aws_instance" "web" {
     sudo yum install -y httpd
     sudo systemctl start httpd
     sudo systemctl enable httpd
-    echo "Hello, World!" > /var/www/html/index.html
+    sudo sh -c 'echo "Hello, World!" > /var/www/html/index.html'
   EOF
 
   tags = {
